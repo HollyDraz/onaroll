@@ -9,10 +9,20 @@ app.use(express.json());
 
 // Routes
 const authRoutes = require('./routes/authRoutes');
+const authMiddleware = require('./middleware/authMiddleware');
+
 app.use('/api/auth', authRoutes);
 
 // Test root route
 app.get('/', (req, res) => res.send('BJJ App API is running'));
+
+// ✅ Protected route
+app.get('/api/me', authMiddleware, (req, res) => {
+  res.json({
+    message: 'Authenticated',
+    user: req.user
+  });
+});
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
