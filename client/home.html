@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="index.css"/>
   <meta charset="UTF-8" />
-  <title>BJJ homepage</title>
+  <title>Home</title>
 </head>
 <body>
-<p>Welcome to the BJJ homepage! this page will be the main landing page for the BJJ application.</p>
+
+  <h1>Welcome to On A Roll </h1>
+  <p>This is the home page. you have logged in successfully</p>
+
+  <script>
+    const token = localStorage.getItem('token');
+    if (!token) {
+      window.location.href = 'index.html';
+    }
+  </script>
+
+  <script src="navbar.js"></script>
 </body>
 </html>

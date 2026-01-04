@@ -2,14 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Login</title>
+  <title>Sign Up</title>
   <link rel="stylesheet" href="index.css" />
 </head>
 <body>
 
-  <h1>On A Roll </h1>
+  <h1>Create Account 🥋</h1>
 
-  <form id="loginForm">
+  <form id="signupForm">
+    <input
+      type="text"
+      id="username"
+      placeholder="Username"
+      required
+    />
+
     <input
       type="email"
       id="email"
@@ -24,16 +31,15 @@
       required
     />
 
-    <button type="submit">Log In</button>
+    <button type="submit">Sign Up</button>
   </form>
 
-<p>
-  Don’t have an account?
-  <a href="signup.html">Sign up</a>
-</p>
-
-
   <p id="error"></p>
+
+  <p>
+    Already have an account?
+    <a href="index.html">Log in</a>
+  </p>
 
   <script src="auth.js"></script>
 </body>

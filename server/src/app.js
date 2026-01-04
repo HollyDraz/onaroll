@@ -16,7 +16,7 @@ app.use('/api/auth', authRoutes);
 // Test root route
 app.get('/', (req, res) => res.send('BJJ App API is running'));
 
-// ✅ Protected route
+//  Protected route
 app.get('/api/me', authMiddleware, (req, res) => {
   res.json({
     message: 'Authenticated',
