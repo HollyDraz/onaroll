@@ -20,7 +20,7 @@ if (loginForm) {
       const data = await res.json();
 
       if (!res.ok) {
-        errorEl.textContent = data.message || 'Login failed';
+        errorEl.textContent = data.message || 'Login failed tough luck';
         return;
       }
 
